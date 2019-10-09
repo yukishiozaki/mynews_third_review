@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1">
-        
-        <title>MyProfile</title>
-    </head>
-    <body>
-        <h1>MyProfile</h1>
-    </body>
-</html>
+@extends('layouts.profile')
+
+@section('title', 'MyProfile')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>Myプロフィール</h2>
+            </div>
+        </div>
+    </div>
+@endsection
+
+
