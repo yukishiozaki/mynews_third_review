@@ -1,14 +1,15 @@
 @extends('layouts.admin')
-
 @section('title', 'ニュースの新規作成')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>ニュースの新規作成</h2>
+                <h2>ニュース新規作成</h2>
                 <form action="{{ action('Admin\NewsController@create') }}" method="post" enctype="multipart/form-data">
-                    
+
+ // 以下を追記
+
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
@@ -30,7 +31,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="title">画像</label>
-                        <div class="col-md-2">
+                        <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                         </div>
                     </div>
