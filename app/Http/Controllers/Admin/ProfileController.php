@@ -38,7 +38,7 @@ class ProfileController extends Controller
         } else {
             $posts = Profile::all();
         }
-        return view('admin.profile.index', ['posts' => $posts, 'cond_title']);
+        return view('admin.profile.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
     
     public function edit(Request $request)
@@ -59,7 +59,7 @@ class ProfileController extends Controller
         
         $profiles->fill($profiles_form)->save();
         
-        return redirect('admin/profile/');
+        return redirect('admin/profile');
     }
     
     public function delete(Request $request)
